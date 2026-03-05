@@ -13,12 +13,18 @@ void main() {
 
     centroFP = new CentroFP(50);
 
-    System.out.println(centroFP.registrarAlumno(alumno1));
-    System.out.println(centroFP.registrarAlumno(alumno2));
-    System.out.println(centroFP.registrarAlumno(alumno3));
-    System.out.println(centroFP.registrarAlumno(alumno2));
+    System.out.println("Registro 1: " + centroFP.registrarAlumno(alumno1));
+    System.out.println("Registro 2: " + centroFP.registrarAlumno(alumno2));
+    System.out.println("Registro 3: " + centroFP.registrarAlumno(alumno3));
+    System.out.println("Registro 4: " + centroFP.registrarAlumno(alumno2));
 
+    //metodo para comprobar los limites del array
     centroFP.imprimirAlumnos();
 
-    System.out.println(centroFP.mostrarAlumnos());
+    System.out.print(centroFP.mostrarAlumnos());
+
+    System.out.println("Alumnos totales en el centro: " + centroFP.contarAlumnos());
+
+    System.out.println("Busqueda 1: " + centroFP.buscarAlumno(5));
+    System.out.println("Busqueda 2: " + centroFP.buscarAlumno(2));
 }
