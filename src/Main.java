@@ -14,7 +14,7 @@ void main() {
     centroFP = new CentroFP(50);
 
     System.out.println(centroFP.registrarAlumno(alumno1));
-    System.out.println(centroFP.registrarAlumno(alumno1));
+    System.out.println(centroFP.registrarAlumno(alumno2));
     System.out.println(centroFP.registrarAlumno(alumno3));
     System.out.println(centroFP.registrarAlumno(alumno2));
 
