@@ -19,4 +19,6 @@ void main() {
     System.out.println(centroFP.registrarAlumno(alumno2));
 
     centroFP.imprimirAlumnos();
+
+    System.out.println(centroFP.mostrarAlumnos());
 }
