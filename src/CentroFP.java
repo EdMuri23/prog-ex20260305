@@ -28,7 +28,7 @@ public class CentroFP {
         Alumno alumnoBuscado = null;
         int i = 0;
 
-        while (alumnoBuscado != null && i < this.MAX_ALUMNOS) {
+        while (alumnoBuscado == null && i < this.MAX_ALUMNOS) {
 
             if (alumnos[i].getId() == id) {
                 alumnoBuscado = alumnos[i];
@@ -40,7 +40,25 @@ public class CentroFP {
         return alumnoBuscado;
     }
 
-    private int buscarPrimerHuecoLibre()
+    /**BUSCAR_PRIMER_HUECO_LIBRE
+     * busca el primer espacio de array que no este ocupado
+     * @return posicion --> -1 si no queda espacio
+     */
+    private int buscarPrimerHuecoLibre(){
+        int posicion = -1;
+        int i = 0;
+
+        while (posicion == -1 && i < this.MAX_ALUMNOS) {
+            if (alumnos[i] == null){
+                posicion = i;
+            }
+
+            i++;
+        }
+
+        return posicion;
+    }
+
     public boolean registrarAlumno(Alumno alumno)
     public void mostrarAlumnos()
     public int contarAlumnos()
