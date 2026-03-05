@@ -82,4 +82,18 @@ public class CentroFP {
 
     //public void mostrarAlumnos()
     //public int contarAlumnos()
+
+    public void imprimirAlumnos() {
+        int contador = 0;
+
+        for (int i = 0; i < this.MAX_ALUMNOS; i++) {
+            if (alumnos[i] == null) {
+                System.out.print("null\t");
+            } else {
+                System.out.print(alumnos[i].getId() + "\t");
+            }
+            contador++;
+        }
+        System.out.println(contador);
+    }
 }
