@@ -30,7 +30,7 @@ public class CentroFP {
 
         while (alumnoBuscado == null && i < this.MAX_ALUMNOS) {
 
-            if (alumnos[i].getId() == id) {
+            if (alumnos[i] != null && alumnos[i].getId() == id) {
                 alumnoBuscado = alumnos[i];
             }
 
@@ -59,7 +59,27 @@ public class CentroFP {
         return posicion;
     }
 
-    public boolean registrarAlumno(Alumno alumno)
-    public void mostrarAlumnos()
-    public int contarAlumnos()
+    /**REGISTRAR_ALUMNO
+     * este metodo se encargara de meter los alumnos en alumnos(array)
+     * @param alumno
+     * @return registrado --> true si se ha registrado false si no
+     */
+    public boolean registrarAlumno(Alumno alumno){
+        boolean registrado = false;
+        Alumno existeAlumno;
+        int posicion;
+
+        existeAlumno = buscarAlumno(alumno.getId());
+        posicion = buscarPrimerHuecoLibre();
+
+        if (existeAlumno == null && posicion != -1) {
+            alumnos[posicion] = alumno;
+            registrado = true;
+        }
+
+        return registrado;
+    }
+
+    //public void mostrarAlumnos()
+    //public int contarAlumnos()
 }
