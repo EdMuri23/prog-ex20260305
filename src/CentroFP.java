@@ -80,7 +80,20 @@ public class CentroFP {
         return registrado;
     }
 
-    //public void mostrarAlumnos()
+    /**MOSTRAR_ALUMNOS
+     * mostara un listado de todos lo alumnos con toda la información
+     * @return infoAlumnos --> StringBuildercon co el listado de alumnos
+     */
+    public String mostrarAlumnos(){
+        StringBuilder infoAlumnos = new StringBuilder("Lista de Alumnos:\n");
+        for (int i = 0; i < this.MAX_ALUMNOS; i++) {
+            if (alumnos[i] != null){
+                infoAlumnos.append(alumnos[i].toString());
+            }
+        }
+        return  infoAlumnos.toString();
+    }
+
     //public int contarAlumnos()
 
     public void imprimirAlumnos() {
