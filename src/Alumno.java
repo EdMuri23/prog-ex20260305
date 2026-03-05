@@ -39,9 +39,11 @@ public class Alumno {
 
     //ToString
     public String toString() {
-        StringBuilder infoAlum = new StringBuilder("Alumno: \t");
+        StringBuilder infoAlum = new StringBuilder("Alumno: ");
         infoAlum.append(id + "\n\t");
         infoAlum.append("nombre:" + nombre + "\n\t");
+        infoAlum.append("titulo:" + tituloFP + "\n\t");
+        infoAlum.append("edad:" + edad +"\n");
 
         return infoAlum.toString();
     }
