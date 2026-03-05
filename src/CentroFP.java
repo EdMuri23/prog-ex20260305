@@ -94,7 +94,20 @@ public class CentroFP {
         return  infoAlumnos.toString();
     }
 
-    //public int contarAlumnos()
+    /**CONTAR_ALUMNOS
+     * este metodo contara el total de alumnos almacenados en alumnos(array)
+     * @return un numero entero
+     */
+    public int contarAlumnos(){
+        int contador = 0;
+
+        for (int i = 0; i < this.MAX_ALUMNOS; i++) {
+            if (alumnos[i] != null){
+                contador++;
+            }
+        }
+        return contador;
+    }
 
     public void imprimirAlumnos() {
         int contador = 0;
